@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Course{% endblock %}
+
+{% block body %}
+    <h1>Edit User Image</h1>
+
+    <div class="container">
+        <div class="row" class="mx-auto" style="width: 600px; margin: auto; margin-bottom: 10%; margin-top: 15%;">
+            {{ form_start(form) }}
+            {{ form_widget(form.imageFile) }}
+
+            <div>
+                <input type="submit" value="{{ 'Edit Image' }}" />
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+    <a href="{{ path('fos_user_profile_show') }}">back to list</a>
+
+{% endblock %}
